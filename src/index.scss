@@ -28,7 +28,7 @@ $DesaturatedBlue: hsl(238, 22%, 44%);
 $BrightBlue: hsl(224, 93%, 58%);
 $ModerateCyan: hsl(170, 45%, 43%);
 $LightGrayishBlue: hsl(240, 75%, 98%);
-$LightGray: hsl(0, 0%, 75%);
+$LightGray: hsl(0, 0%, 41%);
 
 // === fonts ====
 $primary: "Open Sans", sans-serif;
@@ -62,17 +62,27 @@ body {
   color: $VeryDarkBlue;
 }
 
-h1 {
-  font-size: 2.7rem;
+h1,
+h2 {
   line-height: 1.5;
   letter-spacing: 1px;
   font-weight: 700;
+  color: $VeryDarkBlue;
   @include bottomspace-35;
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+  letter-spacing: 0.1px;
 }
 
 p {
   line-height: 1.6;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   @include bottomspace-35;
 }
 
@@ -104,7 +114,7 @@ nav {
 // ========================== Hero ==========================
 .hero {
   text-align: center;
-  @include bottomspace-35;
+  @include bottomspace-100;
   img {
     @include bottomspace-80;
   }
@@ -137,6 +147,73 @@ button {
   }
 }
 
+// ====================== Feature ========================
+.feature {
+  background: url(./Assets/images/bg-curve-mobile.svg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 100px 0 80px;
+  .feature__img {
+    @include bottomspace-80;
+  }
+  h2 {
+    text-align: center;
+  }
+  p {
+    color: $LightGray;
+  }
+  a {
+    color: $ModerateCyan;
+    display: inline;
+    position: relative;
+  }
+  a::after {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $ModerateCyan;
+  }
+  .arrow {
+    display: inline;
+  }
+  .works {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card {
+  background-color: #fff;
+  max-width: 90%;
+  margin: 50px auto 0;
+  box-shadow: 1px 1px 10px rgb(212, 212, 212);
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 1.1rem;
+  p {
+    padding: 10px 0 0;
+    color: $VeryDarkBlue;
+    @include bottomspace-15;
+  }
+}
+.profile {
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  p {
+    padding: initial;
+    margin-bottom: 0;
+  }
+}
+
 // ===================== layout stuff =========================
 .wrapper {
   max-width: 375px;
@@ -155,7 +232,8 @@ button {
   }
 
   // =========== base ===============
-  h1 {
+  h1,
+  h2 {
     font-family: $secondary;
     font-size: 3.8rem;
     max-width: 620px;
@@ -205,5 +283,41 @@ button {
       display: flex;
       max-width: 85%;
     }
+  }
+
+  // ================== Feature ===================
+  .feature {
+    background: url(./Assets/images/bg-curve-desktop.svg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    h2 {
+      text-align: left;
+    }
+    p {
+      color: $VeryDarkBlue;
+    }
+    .works {
+      justify-content: flex-start;
+    }
+  }
+
+  .feature-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    img {
+      max-width: 50%;
+    }
+  }
+
+  .card {
+    margin: 60px 0 0 0;
+    max-width: 65%;
+    font-size: 1.4rem;
+  }
+  .profile p{
+    font-size: 1.2rem;
   }
 }
