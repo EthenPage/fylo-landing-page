@@ -11,6 +11,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 ul,
@@ -19,6 +20,8 @@ a {
   list-style: none;
   text-decoration: none;
   color: inherit;
+  width: fit-content;
+  -webkit-tap-highlight-color: transparent;
 }
 
 // ========================= Var =======================
@@ -78,6 +81,9 @@ h1 {
 h2 {
   font-size: 2.3rem;
   letter-spacing: 0.1px;
+}
+h3 {
+  font-size: 1.9rem;
 }
 
 p {
@@ -166,6 +172,10 @@ button {
     color: $ModerateCyan;
     display: inline;
     position: relative;
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
   a::after {
     position: absolute;
@@ -175,6 +185,10 @@ button {
     width: 100%;
     height: 2px;
     background-color: $ModerateCyan;
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
   .arrow {
     display: inline;
@@ -214,13 +228,83 @@ button {
   }
 }
 
+// ====================== Call to action ========================
+.calltoaction {
+  background-color: $DesaturatedBlue;
+  text-align: center;
+  padding: 60px 15px 30px;
+  color: $LightGrayishBlue;
+  h3 {
+    @include bottomspace-35;
+  }
+  .callform {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+// =============================== footer =========================
+.footer {
+  background-color: $VeryDarkBlue;
+  color: $LightGrayishBlue;
+  font-size: 2rem;
+  padding: 20px;
+  svg * {
+    fill: #fff;
+  }
+
+  address {
+    margin: 50px 0;
+    font-style: normal;
+    a {
+      display: block;
+      @include bottomspace-15;
+    }
+
+    svg {
+      margin-right: 20px;
+    }
+  }
+  .left {
+    @include bottomspace-80;
+  }
+  li {
+    @include bottomspace-15;
+  }
+}
+
+.links {
+  color: $LightGrayishBlue;
+  a:hover {
+    color: $BrightBlue;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 30px;
+  a {
+    margin: 0 20px;
+    border: 1px solid $LightGrayishBlue;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 41px;
+    transition: all 0.5 ease-in-out;
+    &:hover {
+      color: $BrightBlue;
+      border-color: $BrightBlue;
+    }
+  }
+}
+
 // ===================== layout stuff =========================
 .wrapper {
   max-width: 375px;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  // @include outline;
 }
 
 // Desktop
@@ -317,7 +401,29 @@ button {
     max-width: 65%;
     font-size: 1.4rem;
   }
-  .profile p{
+  .profile p {
     font-size: 1.2rem;
+  }
+
+  // ====================== call to action =====================
+  .calltoaction .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+
+    h3 {
+      font-size: 2.8rem;
+    }
+    .call-text {
+      max-width: 45%;
+    }
+  }
+  .callform {
+    button {
+      margin-left: 0;
+      margin-top: 15px;
+      max-width: 55%;
+    }
   }
 }
