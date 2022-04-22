@@ -42,9 +42,9 @@ const Footer = () => {
                 
               </div>
               <div className="social">
-                <a href="#" class="fa-brands fa-facebook-f"> </a>
-                <a href="#" class="fa-brands fa-twitter"> </a>
-                <a href="#" class="fa-brands fa-instagram"> </a>
+                <a href="#" class="fa-brands fa-facebook-f" aria-label="Facebook"> </a>
+                <a href="#" class="fa-brands fa-twitter" aria-label="Twitter"> </a>
+                <a href="#" class="fa-brands fa-instagram" aria-label="Instagram"> </a>
               </div>
           </div>
 
