@@ -23,7 +23,7 @@ This is a solution to the [Fylo landing page with two column layout challenge on
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/fylo-landing-page-with-react-rkD9POJBc)
 - Live Site URL: [Live](https://ethenpage.github.io/fylo-landing-page/)
 
 ## Built with
