@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <React.Fragment>
       <footer className="footer">
-        <section className="wrapper">
+        <div className="wrapper">
           <Logo />
           <div className="footer__sec">
               <address>
@@ -52,7 +52,7 @@ const Footer = () => {
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="https://www.frontendmentor.io/profile/EthenPage">Mirza Monirul Alam</a>.
           </p>
-        </section>
+        </div>
       </footer>
     </React.Fragment>
   );
