@@ -12,7 +12,7 @@ const CallToAction = () => {
                   be happy to help you.
                 </p>
             </div>
-            <form className="callform" action="">
+            <form className="callform" action="#">
               <input
                 type="email"
                 name="email"
