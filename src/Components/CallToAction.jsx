@@ -18,6 +18,7 @@ const CallToAction = () => {
                 name="email"
                 id="email"
                 placeholder="email@example.com"
+                required
               />
               <button>Get Started For Free</button>
             </form>

@@ -17,8 +17,14 @@ const Hero = () => {
             </p>
 
             <form id="emailform" action="#emailform">
-                <input type="email" name="email" id="email" placeholder="Enter your email.." />
-                <button>Get Started</button>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email.."
+                required
+              />
+              <button>Get Started</button>
             </form>
           </div>
         </section>

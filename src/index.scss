@@ -248,7 +248,7 @@ button {
   background-color: $VeryDarkBlue;
   color: $LightGrayishBlue;
   font-size: 2rem;
-  padding: 20px;
+  padding: 70px 20px 10px;
   svg * {
     fill: #fff;
   }
@@ -305,6 +305,16 @@ button {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 1.3rem;
+  max-width: 70%;
+  margin: 90px auto 0;
+  a {
+    color: yellow;
+  }
 }
 
 // Desktop
@@ -425,5 +435,24 @@ button {
       margin-top: 15px;
       max-width: 55%;
     }
+  }
+
+  // ========================== Footer =========================
+  .footer__sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .links {
+    min-width: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer .left {
+    margin-bottom: 0;
+  }
+
+  .attribution {
+    margin: 40px auto 20px;
   }
 }
